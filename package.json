@@ -1,7 +1,7 @@
 {
   "name": "lab1",
   "version": "0.0.1",
-  "description": "",
+  "description": "<p align=\"center\">   <a href=\"http://nestjs.com/\" target=\"blank\"><img src=\"https://nestjs.com/img/logo_text.svg\" width=\"320\" alt=\"Nest Logo\" /></a> </p>",
   "author": "Alikin Nikita <alikinnikita2002@gmail.com> (https://www.instagram.com/alikan_jr_/)",
   "private": true,
   "license": "UNLICENSED",
@@ -68,5 +68,17 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aLikan-jpg/Web-sem2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aLikan-jpg/Web-sem2/issues"
+  },
+  "homepage": "https://github.com/aLikan-jpg/Web-sem2#readme"
 }
