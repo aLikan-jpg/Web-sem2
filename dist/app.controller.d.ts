@@ -1,6 +1,8 @@
 import { AppService } from './app.service';
+import { Response } from 'express';
 export declare class AppController {
-    private readonly appService;
+    private appService;
     constructor(appService: AppService);
-    getHello(): string;
+    renderIndexPage(): void;
+    renderPage(page: string, res: Response): void;
 }

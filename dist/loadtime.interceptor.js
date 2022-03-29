@@ -6,12 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppService = void 0;
+exports.LoadtimeInterceptor = void 0;
 const common_1 = require("@nestjs/common");
-let AppService = class AppService {
+const operators_1 = require("rxjs/operators");
+let LoadtimeInterceptor = class LoadtimeInterceptor {
+    intercept(context, next) {
+        const now = Date.now();
+        return next.handle().pipe((0, operators_1.map)(() => ({ server: Date.now() - now })));
+    }
 };
-AppService = __decorate([
+LoadtimeInterceptor = __decorate([
     (0, common_1.Injectable)()
-], AppService);
-exports.AppService = AppService;
-//# sourceMappingURL=app.service.js.map
+], LoadtimeInterceptor);
+exports.LoadtimeInterceptor = LoadtimeInterceptor;
+//# sourceMappingURL=loadtime.interceptor.js.map

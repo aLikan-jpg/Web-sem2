@@ -1,12 +1,27 @@
-import { Controller, Get } from '@nestjs/common';
+import {
+  Get,
+  Controller,
+  Render,
+  UseInterceptors,
+  Param,
+  Res,
+} from '@nestjs/common';
 import { AppService } from './app.service';
+import { LoadtimeInterceptor } from './loadtime.interceptor';
+import { Response } from 'express';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
+  constructor(private appService: AppService) {}
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @UseInterceptors(new LoadtimeInterceptor())
+  @Render('lab1')
+  renderIndexPage() {
+    return;
+  }
+  @Get(':page')
+  renderPage(@Param('page') page: string, @Res() res: Response) {
+    return res.render(page);
   }
 }
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <title>Code</title>
+</head>
+<body>
+<main>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <img src="img/aLian-logo.jpeg" title="aLikan" alt="">
+                </div>
+                <h1 class="Name">Аликин Никита Романович M33122</h1>
+                <nav class="nav">
+                    <a data-nav="nav" class="navlink" href="achieve.html">Достижения</a>
+                    <a data-nav="nav" class="navlink" href="history.html"> Исторический факт </a>
+                    <a data-nav="nav" class="navlink" href="mascot.html"> Талисман </a>
+                    <a data-nav="nav" class="navlink" href="code.html"> Код </a>
+                    <a data-nav="nav" class="navlink" href="quote.html"> Цитата </a>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+        <section class="Code vape">
+        <div class="container">
+
+
+                <h3 class="title"> Пример кода</h3>
+                <pre>
+    int l = 0;
+    int r = n;
+    int mid;
+
+    while (l < r) {
+    mid = (l + r) / 2;
+
+    if (arr[mid] > key) r = mid;
+    else l = mid + 1;
+    }
+
+    r--;
+
+    if (arr[r] == key) cout << "Индекс элемента " << key << " в массиве равен: " << r;
+    else cout << "Извините, но такого элемента в массиве нет";
+     </pre>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
